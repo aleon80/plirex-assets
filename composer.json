@@ -1,0 +1,24 @@
+{
+  "name": "plirex/assets",
+  "description": "Main assets bundles for core on yii2",
+  "type": "library",
+  "keywords": [
+    "css",
+    "js"
+  ],
+  "authors": [
+    {
+      "name": "Aleon",
+      "email": "aleon880@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.2"
+  },
+  "autoload": {
+    "psr-0": {
+      "plirex\\assets\\": "src/"
+    }
+  }
+}
