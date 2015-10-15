@@ -12,5 +12,5 @@ class jQueryMaskPhoneAsset extends CoreAsset
     ];
     public $depends = [
         'torgestva\assets\jQueryAsset',
-    ];
+   ];
 }

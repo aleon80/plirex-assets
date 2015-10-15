@@ -4,6 +4,7 @@ namespace plirex\assets;
 class jQueryUiAsset extends CoreAsset
 {
     public $sourcePath = '@plirex/assets/components/jQueryUi';
+
     public $baseUrl = '@realPath';
     public $js = [
         'js/jquery-ui.js',
