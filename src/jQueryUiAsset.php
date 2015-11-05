@@ -13,6 +13,6 @@ class jQueryUiAsset extends CoreAsset
         'styles/jquery-ui.css',
     ];
     public $depends = [
-        'torgestva\assets\jQueryAsset',
+        'plirex\assets\jQueryAsset',
     ];
 }

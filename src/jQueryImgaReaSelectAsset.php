@@ -16,6 +16,6 @@ class jQueryImgaReaSelectAsset extends CoreAsset
         'styles/imgareaselect-default.css',
     ];
     public $depends = [
-        'torgestva\assets\jQueryAsset',
+        'plirex\assets\jQueryAsset',
     ];
 }

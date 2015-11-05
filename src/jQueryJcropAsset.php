@@ -12,6 +12,6 @@ class jQueryJcropAsset extends CoreAsset
         'styles/jquery.Jcrop.css',
     ];
     public $depends = [
-        'torgestva\assets\jQueryAsset',
+        'plirex\assets\jQueryAsset',
     ];
 }

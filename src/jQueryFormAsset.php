@@ -11,6 +11,6 @@ class jQueryFormAsset extends CoreAsset
     public $css = [
     ];
     public $depends = [
-        'torgestva\assets\jQueryAsset',
+        'plirex\assets\jQueryAsset',
     ];
 }
