@@ -1,5 +1,5 @@
 <?php
-namespace plirex\assets\src;
+namespace plirex\assets;
 
 class jQueryAsset extends CoreAsset
 {

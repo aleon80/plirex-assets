@@ -1,5 +1,5 @@
 <?php
-namespace plirex\assets\src;
+namespace plirex\assets;
 
 use Yii;
 use yii\web\AssetBundle;
