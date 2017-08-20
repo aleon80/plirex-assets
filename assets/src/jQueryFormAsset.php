@@ -7,6 +7,7 @@ class jQueryFormAsset extends CoreAsset
     public $baseUrl = '@realPath';
     public $js = [
         'js/jquery.form.js',
+        'js/jquery.submit.form.js',
     ];
     public $css = [
     ];
