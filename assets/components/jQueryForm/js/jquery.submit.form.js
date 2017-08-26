@@ -1,28 +1,34 @@
 (function ($) {
-    $.fn.onSubmitForm = function (url, callback, type) {
-        var form = $(this);
-        if (type === undefined) {
-            type = 'post'
-        }
+    $.fn.onSubmitForm = function (url, type, callback, beforeSend) {
+        var form = $(this),
+            url = url || $(this).attr("action"),
+            type = type || 'post';
+
         $(form).submit(function () {
-            //var finishTime = new Date().getTime();
+            if(beforeSend != undefined) {
+                beforeSend(form);
+            }
             if (form.find('.has-error').length) {
                 return false;
             }
-            $(form).find("input[type=text]").attr("readonly", true);
             $.ajax({
                 url: url,
                 type: type,
-                data: form.serialize(),
+                data: new FormData(this),
+                contentType: false,
+                cache: false,
+                processData: false,
                 success: function (response) {
                     var response = JSON.parse(response);
-                    callback(response, form);
+                    if(callback != undefined) {
+                        callback(response,form);
+                    }
                 }
             });
             return false;
         });
-    }
-    $.fn.uploadFile = function(url, callback){
+    };
+    $.fn.uploadFile = function (url, callback) {
         var form = $(this);
         $.ajaxFileUpload({
             url: url,
@@ -33,14 +39,13 @@
                 var response = JSON.parse(response);
                 callback(response, form);
             },
-            error: function(xhr, textStatus, errorThrown)
-            {
+            error: function (xhr, textStatus, errorThrown) {
                 return false;
             }
         });
     }
 
-    $.loadFormValidatePhone = function (){
+    $.loadFormValidatePhone = function () {
 
     }
 }(window.jQuery));
